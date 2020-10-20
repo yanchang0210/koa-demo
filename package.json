@@ -1,0 +1,53 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "build": "cross-env NODE_ENV=prod webpack --config config/webpack.config.prod.js",
+    "serve": "nodemon --exec babel-node src/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node --inspect ./src/index.js",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^9.4.0",
+    "@types/koa-helmet": "^6.0.0",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-static": "^4.0.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-combine-routers": "^4.0.2",
+    "koa-helmet": "^6.0.0",
+    "koa-json": "^2.0.2",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@types/clean-webpack-plugin": "^0.1.3",
+    "@types/koa-compress": "^4.0.1",
+    "@types/rimraf": "^3.0.0",
+    "@types/terser-webpack-plugin": "^5.0.0",
+    "@types/webpack": "^4.41.22",
+    "@types/webpack-merge": "^4.1.5",
+    "@types/webpack-node-externals": "^2.5.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "koa-compress": "^5.0.1",
+    "nodemon": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^1.4.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
